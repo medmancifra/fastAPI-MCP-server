@@ -1,6 +1,14 @@
 FROM python:3.11-slim
 
 WORKDIR /app
+
+# System dependencies required by pytesseract (OCR) and pyzbar (barcode scanning)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    tesseract-ocr \
+    libzbar0 \
+    libzbar-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
