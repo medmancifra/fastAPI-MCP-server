@@ -2,10 +2,8 @@
 
 import os
 import subprocess
-import sys
 from pathlib import Path
 
-import pytest
 from PIL import Image
 
 DEMO_DIR = Path(__file__).parent.parent / "demo_project"

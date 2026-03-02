@@ -1,6 +1,5 @@
 import pytest
 from httpx import AsyncClient
-import asyncio
 
 @pytest.mark.asyncio
 async def test_mcp_server():
