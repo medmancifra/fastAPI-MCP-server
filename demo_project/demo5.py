@@ -20,7 +20,7 @@ Interactive commands (examples):
     help
     exit
 """
-
+#!/usr/bin/env python3
 import argparse
 import os
 import re
@@ -223,3 +223,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
